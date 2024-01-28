@@ -136,7 +136,7 @@ AWS CloudWatch 및 로깅 서비스를 사용하여 인프라스트럭처 및 �
 ### 리소스 확인 및 웹 페이지 확인
 ![Nginx_Web_Page](https://github.com/dongkoony/aws_3_tier/assets/109497684/2444a9d0-292b-4375-a4db-ee907aec4fae)
   ```bash
-  실행 후 프롬프트 Outputs: web_instance_eip = "13.xxx.xxx.161" Web Page 접속 확인.
+  실행 후 프롬프트 Outputs: web_instance_eip = "43.xxx.xxx.187" Web Page 접속 확인.
   AWS 리소스 확인
   ```
 
