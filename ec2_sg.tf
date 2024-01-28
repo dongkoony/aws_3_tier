@@ -5,12 +5,12 @@ resource "aws_security_group" "web_nsg" {
     description = "Web Server Security Group"
     vpc_id = aws_vpc.three_tier_vpc.id
 
-    #omgress 규칙 : 22번 포트 열어줌, SKB 인터넷 사용시 11117 임시 포트 사용. ssh 22번 포트 사용 불가.
+    #인바운드 규칙 : 22번 포트 열어줌, SKB 인터넷 사용시 11117 임시 포트 사용. ssh 22번 포트 사용 불가.
     ingress {
         from_port = 11117
         to_port = 11117
         protocol = "tcp"
-        cidr_blocks = ["192.168.1.100/32"]
+        cidr_blocks = ["0.0.0.0/0"]
     }
 
 
@@ -21,7 +21,7 @@ resource "aws_security_group" "web_nsg" {
         cidr_blocks = ["0.0.0.0/0"]
     }
 
-    #Egress 규칙 : all traffic agree
+    #아웃바운드 규칙 : all traffic agree
     egress {
         from_port = 0
         to_port = 0
@@ -39,15 +39,15 @@ resource "aws_security_group" "was_nsg" {
     description = "Web_Server_Security_Group_app_servers" 
     vpc_id = aws_vpc.three_tier_vpc.id
 
-    # ingress 규칙 : 22번 포트 열어줌, SKB 인터넷 사용시 11117 임시 포트
-    ingress = {
+    # 인바운드 규칙 : 
+    ingress {
         from_port = 8080
         to_port = 8080
         protocol = "tcp"
         cidr_blocks = ["0.0.0.0/0"]
     }
 
-    # Egress 규칙 : all traffic agree
+    # 아웃바운드 규칙 : all traffic agree
     egress {
         from_port = 0
         to_port = 0
