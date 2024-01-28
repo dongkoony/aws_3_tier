@@ -129,7 +129,7 @@ AWS CloudWatch 및 로깅 서비스를 사용하여 인프라스트럭처 및 �
   
   was_instance_id = "i-07f5xxxxxxxxxxx865"
   was_instance_private_ip = "10.0.x.xx"
-  web_instance_eip = "13.xxx.xxx.161"
+  web_instance_eip = "43.xxx.xxx.187"
   web_instance_id = "i-0cxxxxxxxxx7e9"
   ```
 
