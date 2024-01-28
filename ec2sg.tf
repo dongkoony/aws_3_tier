@@ -22,7 +22,7 @@ resource "aws_security_group" "web_nsg" {
     }
 
     #Egress 규칙 : all traffic agree
-    Egress {
+    egress {
         from_port = 0
         to_port = 0
         protocol = "-1"
@@ -48,7 +48,7 @@ resource "aws_security_group" "was_nsg" {
     }
 
     # Egress 규칙 : all traffic agree
-    Egress {
+    egress {
         from_port = 0
         to_port = 0
         protocol = "-1"
