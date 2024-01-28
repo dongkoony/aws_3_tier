@@ -51,8 +51,8 @@ AWS CloudWatch 및 로깅 서비스를 사용하여 인프라스트럭처 및 �
 
 ### 이 저장소를 클론합니다.
    ```bash
-   git clone https://github.com/dongkoony/aws-terraform-docker-ubuntu-.git
-   cd aws-terraform-docker-ubuntu-
+   git clone https://github.com/dongkoony/aws_3_tier.git
+   cd aws_3_tier
    ```
 
 ### Version
