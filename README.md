@@ -100,7 +100,8 @@ AWS CloudWatch 및 로깅 서비스를 사용하여 인프라스트럭처 및 �
   // AWS 서비스 실행
   >> terraform init
 
-  >> terraform apply 또는 terraform apply --auto-approve  **--auto-approve 옵션 넣을 시 "Enter a value: yes" 없이 다이렉트로 진행**
+  >> terraform apply 또는 terraform apply --auto-approve
+  ****--auto-approve 옵션 넣을 시 "Enter a value: yes" 없이 다이렉트로 진행****
 
   Do you want to perform these actions?
     Terraform will perform the actions described above.
@@ -140,7 +141,9 @@ AWS CloudWatch 및 로깅 서비스를 사용하여 인프라스트럭처 및 �
 
 ### Terraform Destroy(리소스 삭제)
   ```bash
-  >> terraform destroy / terraform destroy --auto-approve **--auto-approve 옵션 넣을 시 "Enter a value: yes" 없이 다이렉트로 진행**
+  // AWS 서비스(리소스) 삭제
+  >> terraform destroy / terraform destroy --auto-approve
+  ****--auto-approve 옵션 넣을 시 "Enter a value: yes" 없이 다이렉트로 진행****
 
   Do you really want to destroy all resources?
     Terraform will destroy all your managed infrastructure, as shown above.
@@ -163,4 +166,9 @@ AWS CloudWatch 및 로깅 서비스를 사용하여 인프라스트럭처 및 �
   aws_vpc.three_tier_vpc: Destruction complete after 1s
   
   Destroy complete! Resources: 28 destroyed.
+  ```
+
+### AWS 서비스(리소스) 삭제 확인
+  ```bash
+  EC2, EIP, RDS, VPC 등등 삭제 여부 확인
   ```
