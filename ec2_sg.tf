@@ -21,6 +21,14 @@ resource "aws_security_group" "web_nsg" {
         cidr_blocks = ["0.0.0.0/0"]
     }
 
+    # 인바운드 http(nginx) 웹 서버(미들웨어) Port
+    ingress {
+        from_port = 80
+        to_port = 80
+        protocol = "tcp"
+        cidr_blocks = ["0.0.0.0/0"]
+    }
+
     #아웃바운드 규칙 : all traffic agree
     egress {
         from_port = 0
