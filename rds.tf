@@ -6,7 +6,7 @@ resource "aws_db_parameter_group" "three_rds_parameter" {
 
     parameter {
         name = "character_set_server"
-        value = "UTF8" # 인코딩 설정
+        value = "UTF8MB4" # 모든 유니코드 인코딩 (특수 문자 및 이모티콘 포함)
     }
 
     lifecycle {
