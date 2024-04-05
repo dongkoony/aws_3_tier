@@ -112,8 +112,8 @@ AWS CloudWatch 및 로깅 서비스를 사용하여 인프라스트럭처 및 �
   aws_db_parameter_group.three_rds_parameter: Creating...
   aws_eip.three_tier_eip: Creating...
   aws_vpc.three_tier_vpc: Creating...
-  aws_eip.three_tier_eip: Creation complete after 1s [id=eipalloc-04760dac1a7b62f52]
-  aws_vpc.three_tier_vpc: Creation complete after 1s [id=vpc-046c4f6e1ad75ed38]
+  aws_eip.three_tier_eip: Creation complete after 1s [id=eipalloc-0476********62f52]
+  aws_vpc.three_tier_vpc: Creation complete after 1s [id=vpc-046c4********5ed38]
   aws_internet_gateway.three_tier_GateWay: Creating...
   .
   .
@@ -121,7 +121,7 @@ AWS CloudWatch 및 로깅 서비스를 사용하여 인프라스트럭처 및 �
   .
   aws_db_instance.three_rds: Still creating... [6m20s elapsed]
   aws_db_instance.three_rds: Still creating... [6m30s elapsed]
-  aws_db_instance.three_rds: Creation complete after 6m40s [id=db-YX5ZZ4MD3A2EZRFAADEOADYXQ4]
+  aws_db_instance.three_rds: Creation complete after 6m40s [id=db-YX5ZZ4M***********OADYXQ4]
   
   Apply complete! Resources: 28 added, 0 changed, 0 destroyed.
   
@@ -152,18 +152,18 @@ AWS CloudWatch 및 로깅 서비스를 사용하여 인프라스트럭처 및 �
   
     Enter a value: yes
   
-  aws_route_table_association.pub_c_assoc: Destroying... [id=rtbassoc-087353458dd2bc1a9]
-  aws_eip.web_eip: Destroying... [id=eipalloc-0d04626ea6333192f]
-  aws_route_table_association.rds_a_assoc: Destroying... [id=rtbassoc-001e0bfde6a2a3972]
-  aws_route_table_association.pub_sub_route: Destroying... [id=rtbassoc-07a47f1377c73f216]
-  aws_route_table_association.rds_c_assoc: Destroying... [id=rtbassoc-02f2c344589cd535e]
-  aws_route_table_association.pri_c_assoc: Destroying... [id=rtbassoc-093e6caeee3c3d9c6]
+  aws_route_table_association.pub_c_assoc: Destroying... [id=rtbassoc-087353******bc1a9]
+  aws_eip.web_eip: Destroying... [id=eipalloc-0d04626******192f]
+  aws_route_table_association.rds_a_assoc: Destroying... [id=rtbassoc-001e0b******a3972]
+  aws_route_table_association.pub_sub_route: Destroying... [id=rtbassoc-07a4******c73f216]
+  aws_route_table_association.rds_c_assoc: Destroying... [id=rtbassoc-02f2c3******d535e]
+  aws_route_table_association.pri_c_assoc: Destroying... [id=rtbassoc-093e6c******3d9c6]
   .
   .
   .
   .
   aws_subnet.Pri_subnet_A: Destruction complete after 0s
-  aws_vpc.three_tier_vpc: Destroying... [id=vpc-046c4f6e1ad75ed38]
+  aws_vpc.three_tier_vpc: Destroying... [id=vpc-046c4f******d38]
   aws_vpc.three_tier_vpc: Destruction complete after 1s
   
   Destroy complete! Resources: 28 destroyed.

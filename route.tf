@@ -4,12 +4,12 @@ resource "aws_route_table" "pub_route" {
     vpc_id = aws_vpc.three_tier_vpc.id
 
     route {
-        cidr_block = "0.0.0.0/0"
+        cidr_block = var.pub_route_cidr_block
         gateway_id = aws_internet_gateway.three_tier_GateWay.id
     }
 
     tags = {
-        Name = "Public Route Table"
+        Name = var.pub_route_table_name
     }
 }
 

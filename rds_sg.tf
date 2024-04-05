@@ -7,9 +7,9 @@ resource "aws_security_group" "rds_nsg" {
 
 # 인바운드 규칙 -> Private 서브넷 CIDR 블록에서 3306 Port 접근 허용
     ingress {
-        from_port = 3306
-        to_port = 3306
-        protocol = "tcp"
+        from_port = var.rds_sg_ingress_port
+        to_port = var.rds_sg_ingress_port
+        protocol = var.rds_sg_ingress_protocol
         cidr_blocks = [aws_subnet.Pri_subnet_A.cidr_block, aws_subnet.Pri_subnet_C.cidr_block]
     }
 
