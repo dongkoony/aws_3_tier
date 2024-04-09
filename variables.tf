@@ -300,4 +300,5 @@ variable "budget_email_address" {
 
 variable "budget_subscription_type" {
     description = "budget 알림 구독 타입"
+    type        = string
 }

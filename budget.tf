@@ -26,7 +26,7 @@ resource "aws_budgets_budget_action" "stop_ec2_instances" {
 
     definition {
         ssm_action_definition {
-        action_sub_type = "AWS-StopEC2Instances"
+        action_sub_type = "STOP_EC2_INSTANCES"
         region = var.region
         instance_ids = [aws_instance.Web_server.id, aws_instance.Was_Server.id] # 웹 서버, 와스 서버 EC2 인스턴스 ID
         }
