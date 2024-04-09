@@ -286,3 +286,18 @@ variable "rds_route_table_name" {
     description = "RDS Route Table의 이름"
     type        = string
 }
+
+# "budget.tf"
+variable "budget_limit_amount" {
+    description = "EC2 월별 예산 USD"
+    type        = number 
+}
+
+variable "budget_email_address" {
+    description = "EC2 월별 예산 알림 이메일 주소"
+    type        = string 
+}
+
+variable "budget_subscription_type" {
+    description = "budget 알림 구독 타입"
+}
