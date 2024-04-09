@@ -16,15 +16,15 @@ was_ingress_to_port   = 8080
 
 # "ec2.tf"
 # Web EC2 Instance 변수
-web_instance_ami = "<AMI_ID>" # 예: Ubuntu 22.04 LTS 64(x86)
+web_instance_ami = "ami-09a7535106fbd42d5" # 예: Ubuntu 22.04 LTS 64(x86)
 web_instance_type = "t2.micro"
-web_instance_key_name = "<KEY_PAIR_NAME>" # 예: my_key_pair
+web_instance_key_name = "3-tier-test" # 예: my_key_pair
 web_instance_name = "Web_Server"
 
 # WAS EC2 Instance 변수
-was_instance_ami = "<AMI_ID>" # 예: Ubuntu 22.04 LTS 64(x86)
+was_instance_ami = "ami-09a7535106fbd42d5" # 예: Ubuntu 22.04 LTS 64(x86)
 was_instance_type = "t2.micro"
-was_instance_key_name = "<KEY_PAIR_NAME>" # 예: my_key_pair
+was_instance_key_name = "3-tier-test" # 예: my_key_pair
 was_instance_name = "WAS_Server"
 
 # WEB Instance Elastic IP 변수
@@ -68,8 +68,8 @@ rds_instance_class = "db.t3.micro" # DB 인스턴스 타입
 rds_instance_allocated_storage = 20 # DB 인스턴스 스토리지 크기(GB)
 rds_instance_storage_type = "gp2" # DB 인스턴스 스토리지 타입
 rds_instance_storage_encrypted = false # DB 인스턴스 스토리지 암호화 여부
-rds_instance_username = "<DB_USERNAME>" # DB 인스턴스 계정 이름
-rds_instance_password = "<DB_PASSWORD>" # DB 인스턴스 계정 비밀번호
+rds_instance_username = "admin" # DB 인스턴스 계정 이름
+rds_instance_password = "admin1234!@#" # DB 인스턴스 계정 비밀번호
 rds_instance_skip_final_snapshot = true # DB 인스턴스 종료 시 스냅샷 생성 여부
 rds_instance_multi_az = false # DB 인스턴스 복제 여부
 rds_instance_publicly_accessible = false # DB 인스턴스 공개 여부
@@ -91,3 +91,8 @@ pri_route_cidr_block = "0.0.0.0/0"
 
 # RDS Route Table 변수 설정
 rds_route_table_name = "RDS_Route_Table"
+
+# "budget.tf"
+budget_limit_amount = "10"
+budget_email_address = "shin.dh922@gmail.com"
+budget_subscription_type = "EMAIL" #대문자로만 사용 가능
