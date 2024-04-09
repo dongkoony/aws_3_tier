@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=transparent&color=0078D7&height=200&section=header&text=Building_an_AWS_3-TierArchitecture&fontSize=40&fontColor=703EE5&animation=twinkling)
+![header](https://capsule-render.vercel.app/api?type=Venom&color=0078D7&height=200&section=header&text=Building_an_AWS_3-Tier_Architecture&fontSize=40&fontColor=703EE5&animation=twinkling)
 
 ![aws_3-tier_architecture](https://github.com/dongkoony/aws_3_tier/assets/109497684/8f63b8aa-ed96-4588-9ca5-d644446fec4c)
 
