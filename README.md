@@ -1,4 +1,5 @@
-# AWS 3-Tier 아키텍처 구축
+![header](https://capsule-render.vercel.app/api?type=transparent&color=0078D7&height=200&section=header&text=Building an AWS 3-Tier Architecture&fontSize=40&fontColor=703EE5&animation=twinkling)
+
 ![aws_3-tier_architecture](https://github.com/dongkoony/aws_3_tier/assets/109497684/8f63b8aa-ed96-4588-9ca5-d644446fec4c)
 
 ## 프로젝트 개요: AWS 3-Tier 아키텍처 구축
