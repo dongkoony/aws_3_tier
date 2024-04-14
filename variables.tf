@@ -45,6 +45,17 @@ variable "was_ingress_to_port" {
     type        = number
 }
 
+variable "Jenkins_ingress_from_port" {
+    description = "Jenkins 시작 포트"
+    type        = number
+}
+
+variable "Jenkins_ingress_to_port" {
+    description = "Jenkins 종료 포트"
+    type        = number
+}
+
+
 # "ec2.tf"
 # WEB EC2 인스턴스 변수
 variable "web_instance_ami" {
@@ -91,6 +102,27 @@ variable "was_instance_name" {
 # WEB Instance Elastic IP 변수
 variable "web_eip_name" {
     description = "Web 인스턴스 엘라스틱 IP Tags Name"
+    type        = string
+}
+
+# Jenkins Server 변수
+variable "jenkins_instance_ami" {
+    description = "Jenkins Server AMI"
+    type        = string
+}
+
+variable "jenkins_instance_type" {
+    description = "Jenkins Server 유형"
+    type        = string
+}
+
+variable "jenkins_instance_key_name" {
+    description = "Jenkins Server 키페어"
+    type        = string
+}
+
+variable "jenkins_instance_name" {
+    description = "Jenkins Server Tags"
     type        = string
 }
 

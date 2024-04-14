@@ -68,3 +68,17 @@ resource "aws_security_group" "was_nsg" {
         Name = "was_nsg"
     }
 }  
+
+resource "aws_security_group" "Jenkins_nsg" {
+    name        = "Jenkins_nsg"
+    description = "Jenkins Server Security Group"
+    vpc_id      = aws_vpc.three_tier_vpc.id
+
+    ingress {
+        from_port   = var.Jenkins_ingress_from_port # 8080
+        to_port     = var.Jenkins_ingress_to_port   # 8080
+        protocol    = "tcp"
+        cidr_blocks = ["0.0.0.0/0"]
+        description = "Jenkins internet users"
+    }
+}

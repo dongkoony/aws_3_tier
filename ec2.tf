@@ -9,33 +9,14 @@ resource "aws_instance" "Web_server" {
 
 
     # Web Server Nginx 설치 코드
+# Web Server Nginx 설치 코드
     user_data = <<-EOF
-                #!/bin/bash
-                sudo apt-get update -y
-                sudo apt-get install nginx -y
-
-                # Web Page Message 작성
-                echo "<html><body>" > /var/www/html/index.html
-                echo "<h1>Welcome to Donghyeon's AWS 3-tier Terraform Study</h1>" >> /var/www/html/index.html
-                echo "<p>This is a custom welcome message.</p>" >> /var/www/html/index.html
-                echo "</body></html>" >> /var/www/html/index.html
-
-                sudo systemctl enable --now nginx
+        ${file("script/nginx.sh")}
                 EOF
+
 
     tags = {
         Name = var.web_instance_name # 인스턴스 이름 설정
-    }
-}
-
-
-# WEB Instance Elastic IP ADD
-
-resource "aws_eip" "web_eip" {
-    instance = aws_instance.Web_server.id
-
-    tags = {
-        Name = var.web_eip_name # EIP 태그 이름 설정
     }
 }
 
@@ -52,3 +33,30 @@ resource "aws_instance" "Was_Server" {
     }
 }
 
+# CI/CD 도구로 젠킨스(EC2) 추가
+resource "aws_instance" "Jenkins_Server" {
+    ami                    = var.jenkins_instance_ami # 젠킨스 AMI
+    instance_type          = var.jenkins_instance_type # 젠킨스 인스턴스 타입
+    key_name               = var.jenkins_instance_key_name # 젠킨스 키페어
+    subnet_id              = aws_subnet.Pub_subnet_C.id
+
+    tags = {
+        Name = var.jenkins_instance_name # 인스턴스 이름 설정
+    }
+
+    # User data에 젠킨스 스크립트 추가
+    user_data = <<-EOF
+        ${file("script/docker.sh")}
+        ${file("script/container.sh")}
+    EOF
+}
+
+# WEB Instance Elastic IP ADD
+
+resource "aws_eip" "web_eip" {
+    instance = aws_instance.Web_server.id
+
+    tags = {
+        Name = var.web_eip_name # EIP 태그 이름 설정
+    }
+}
