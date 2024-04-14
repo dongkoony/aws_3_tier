@@ -33,8 +33,8 @@ resource "aws_budgets_budget_action" "stop_ec2_instances" {
     }
 
     subscriber {
-        address = var.budget_email_address
-        subscription_type = var.budget_subscription_type
+        address = "shin.dh922@gmail.com"
+        subscription_type = "EMAIL"
     }
 }
 # 예산 조치 생성: EC2 인스턴스 중지 Stop EC2 Instances (종료 원할 시 중지 주석 처리)
